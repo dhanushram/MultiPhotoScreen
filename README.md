@@ -15,9 +15,12 @@ Provides a clean interface to capture multiple photos (up to 8) from user. Allow
 2) Provide your own mechanism  (like adding "Done" UIBarButton) to pop the multiphoto screen  
 3) Before popping, call the method 'returnFinalPicArray' which would return an NSArray of UIImage of the photos through the Delegate
 
-
-
 ##License
 Copyright (c) 2012 Dhanush Balachandran  
 Licensed under the MIT license.
+
+##Contact
+[My Things Support] [support] or [Support Email] [email]
+[support]: http://www.mythingsapp.com/Support.html
+[email]: mailto:support@mythingsapp.com
 
