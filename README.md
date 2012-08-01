@@ -9,6 +9,6 @@ Provides a clean interface to capture multiple photos (up to 8) from users. Allo
 
 
 ##License
-Copyright (c) 2012 Dhanush Balachandran
+Copyright (c) 2012 Dhanush Balachandran  
 Licensed under the MIT license.
 
