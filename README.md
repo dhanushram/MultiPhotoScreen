@@ -7,6 +7,8 @@ Provides a clean interface to capture multiple photos (up to 8) from users. Allo
 
 ##Screenshot
 
+<img src="https://github.com/dhanushram/MultiPhotoScreen/blob/master/Screenshots/screenshot.png"/>
+
 
 ##License
 Copyright (c) 2012 Dhanush Balachandran  
