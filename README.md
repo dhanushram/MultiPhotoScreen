@@ -12,7 +12,8 @@ Provides a clean interface to capture multiple photos (up to 8) from user. Allow
 
 ##Instruction
 1) You could use this screen in your app by assigning a Delegate object that conforms to MultiPhotoDelegate Protocol.  
-2) Provide your own mechanism  (like adding "Done" button UIBar the screen) to pop the multiphoto screen and call the method 'returnFinalPicArray' which would return an NSArray of UIImage of the photos through the Delegate call.
+2) Provide your own mechanism  (like adding "Done" UIBarButton) to pop the multiphoto screen  
+3) Before popping, call the method 'returnFinalPicArray' which would return an NSArray of UIImage of the photos through the Delegate
 
 
 
