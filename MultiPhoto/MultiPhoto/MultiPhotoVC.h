@@ -11,10 +11,17 @@
 #import "PhotosView.h"
 #import "photoButton.h"
 
+@protocol MultiPhotoVCDelegate <NSObject>
+
+- (void) finishedWithPicArray: (NSArray*) image
+                         from:(id) sender;
+
+@end
 
 @interface MultiPhotoVC : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet PhotosView *drawingView;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
+
+@property (weak, nonatomic) id<MultiPhotoVCDelegate> delegate;  //Delegate to return the final picture array
 
 @end

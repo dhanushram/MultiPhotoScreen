@@ -33,7 +33,28 @@
 
 @implementation MultiPhotoVC
 @synthesize drawingView;
-@synthesize doneButton;
+@synthesize delegate;
+
+//Call this function to return final picture array back to your App through Delegate
+- (void) returnFinalPicArray
+{
+    NSMutableArray * tempArray;
+    if (!totalNoOfPhotos)
+    {
+        tempArray = nil;
+    }
+    else
+    {   tempArray = [NSMutableArray array];
+        for (int i = 0; i < totalNoOfPhotos ; i++)
+        {
+            photoButton * tempbutton = [buttonArray objectAtIndex:i];
+            [tempArray addObject:tempbutton.imageView.image];
+        }
+    }
+    
+    [self.delegate finishedWithPicArray:tempArray from:self];
+}
+
 
 - (void)viewDidLoad
 {
@@ -66,7 +87,8 @@
 }
 
 
-#define NO_OF_PHOTOS 0
+#define NO_OF_PHOTOS 0 //Change this to [1-8] for populating dummy photos
+
 -(void)viewDidAppear:(BOOL)animated 
 {
     
@@ -118,10 +140,10 @@
         [self resetOrgDictionary];
     }
 }
+
 - (void)viewDidUnload
 {
     [self setDrawingView:nil];
-    [self setDoneButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -267,18 +289,15 @@
     if (organizeFlag)
     {
         deleteButton.enabled = NO;
-        doneButton.enabled = NO;
     }
     else if (deleteFlag) 
     {
         orgButton.enabled = NO;
-        doneButton.enabled = NO;
     }
     else 
     {
         orgButton.enabled = (totalNoOfPhotos > 1) ? YES : NO;
         deleteButton.enabled = (totalNoOfPhotos > 0) ? YES : NO;
-        doneButton.enabled = YES;
     }
 
 }
