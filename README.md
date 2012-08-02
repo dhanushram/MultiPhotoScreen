@@ -1,4 +1,4 @@
-MultiPhotoScreen
+iOS Multiple Photo Capture Screen
 ================
 
 This project was developed as part of the iOS App: [My Things - Where Are They?] [link]  
