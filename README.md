@@ -7,8 +7,7 @@ Provides a clean interface to capture multiple photos (up to 8) from user. Allow
 
 ##Screenshot
 
-[Screenshot] [ss]
-[ss]: https://github.com/dhanushram/MultiPhotoScreen/blob/master/Screenshots/screenshot.png
+![Screenshot] (https://github.com/dhanushram/MultiPhotoScreen/blob/master/Screenshots/screenshot.png)
 
 ##Instruction
 1) You could use this screen in your app by assigning a Delegate object that conforms to MultiPhotoDelegate Protocol.  
